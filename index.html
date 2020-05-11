@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Challange 2</title>
+</head>
+
+<body>
+    <div class="canvas" id="canvas">
+        <div class="top-bar">
+            <div class="money">
+                <h1>Pul : <span id="myMoney">100</span>$</h1>
+            </div>
+            <div class="perk" onclick="givePerk()" id="perk">
+                <h1>Perk : <span id="myPerk">5</span></h1>
+            </div>
+            <div class="energy">
+                <h1>Enerji : <span id="myEnergy">200</span>%</h1>
+            </div>
+        </div>
+
+        <div class="icon" onclick="information()">
+            <i class="fa fa-info" id="info-top"></i>
+        </div>
+
+        <div class="information-panel" id="panel">
+            <h1>Oyun -- Challange 3 <span onclick="closeInformation()"><i class="fa fa-close"></i></span></h1>
+            <ul>
+                <li>Isciler : 20$-a yeni bir isci satin alinar. Alinan her bir isci 15 sanieden bir erzaqdan istifade eder ve her 5 saniede 8$ pul qazandirar. Eger 1 isciye bele erzaq catmaz ise hamisi isden ayrilar.</li>
+                <li>Erzaq : 15$-a sadece isciler istifade eder</li>
+                <li>Islenmemis mal : pul qazanmaq ucun isciler bu mallari isler ve satar</li>
+                <li>Pul : oyuna 100$ ile baslanir</li>
+                <li>Perk : Skorunuz 50 ( daha sonra herdefe x3 de ) ye cixdiqda size 1000 dollarliq avans veriler, oyun icerisinde perk alinmir sadece basda 5 eded perk ile baslayirsan</li>
+                <li>Enerji : yeni bir isci ise almaq ucun 10% enerji istifade ediler ve bu ozu-ozune 1 - 1 dolar. Coxda ehemyetli olmaz cunki onsda cox isci almaq iflas sebibi olur</li>
+                <li>Skor : her hanisa birse aldiginizda 1 puan artar</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="owner">
+                <ul>
+                    <li>Isci : <span id="myWorker">0</span></li>
+                    <li>Erzaq : <span id="myFood">0</span></li>
+                    <li>Islenmemis mal : <span id="myCrop">0</span></li>
+                </ul>
+            </div>
+            <div class="shop">
+                <div class="worker">
+                    <div class="worker-shop" onclick="buyWorker()"></div>
+                    <h1 id="payment">Isci : <span id="workerPayment">20</span>$</h1>
+                </div>
+                <div class="food">
+                    <div class="food-shop" onclick="buyFood()"></div>
+                    <h1 id="payment">Erzaq : <span id="foodPayment">15</span>$</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreFood5()">Buy +5</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreFood10()">Buy +10</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreFood50()">Buy +50</h1>
+                </div>
+                <div class="crop">
+                    <div class="crop-shop" onclick="buyCrop()"></div>
+                    <h1 id="payment">Islenmemis mal : <span id="cropPayment">5</span>$</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreCrop5()">Buy +5</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreCrop10()">Buy +10</h1>
+                    <h1 class="buyMoreCrop" onclick="buyMoreCrop50()">Buy +50</h1>
+                </div>
+            </div>
+
+            <div class="score-bar">
+                <h1>Scor : <span id="score">0</span></h1>
+            </div>
+            <div class="info">
+                <h1 id="info">Bir olay olduqda burdan gore bilersiniz</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="end-game" id="lose">
+        <ul>
+            <li>Yuksek Scor : <span id="highScore">0</span></li>
+        </ul>
+    </div>
+
+    <div id="requiredPerk">50</div>
+    <script src="./js/main.js"></script>
+    <script src="./js/constants.js"></script>
+    <script src="./js/worker.js"></script>
+    <script src="./js/crop.js"></script>
+    <script src="./js/food.js"></script>
+</body>
+
+</html>

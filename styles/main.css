@@ -1,0 +1,276 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.top-bar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-bar div {
+    display: flex;
+    margin: 15px 30px;
+    padding: 5px 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.owner {
+    margin-left: 20px;
+}
+
+.owner ul li {
+    margin: 30px 0;
+}
+
+.shop {
+    display: flex;
+    margin-right: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.shop div {
+    margin: 0 25px;
+}
+
+.worker, .food, .crop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.worker h1 {
+    margin: 10px 0;
+}
+
+.food h1 {
+    margin: 10px 0;
+}
+
+.crop h1 {
+    margin: 10px 0;
+}
+
+#payment {
+    width: 100%;
+}
+
+.worker-shop {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(105, 0, 0);
+    opacity: .5;
+    transition: all ease .3s;
+}
+
+.food-shop {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(0, 100, 22);
+    opacity: .5;
+    transition: all ease .3s;
+}
+
+.crop-shop {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(0, 68, 255);
+    opacity: .5;
+    transition: all ease .3s;
+}
+
+.worker-shop:hover {
+    opacity: 1;
+}
+
+.food-shop:hover {
+    opacity: 1;
+}
+
+.crop-shop:hover {
+    opacity: 1;
+}
+
+.score-bar {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 10px 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 500px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.buyMoreCrop {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.perk {
+    cursor: pointer;
+    background-color: rgb(6, 209, 6);
+}
+
+#requiredPerk {
+    display: none;
+}
+
+.end-game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 37, 37);
+    position: absolute;
+    color: rgb(207, 207, 207);
+    font-family: monospace;
+}
+
+.end-game ul li {
+    margin: 15px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+#lose {
+    display: none;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+}
+
+.information-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    flex-direction: column;
+}
+
+.information-panel ul li {
+    margin: 10px 5px;
+}
+
+#panel {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .owner ul {
+        display: flex;
+    }
+
+    .shop {
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: -1px;
+    }
+
+    .shop div {
+        margin: 0 5px;
+    }
+
+    .score-bar {
+        margin-bottom: 60px;
+    }
+
+    .info {
+        width: 100%;
+        height: 50px;
+        margin: auto;
+    }
+
+    .top-bar {
+        margin-top: 10px;
+    }
+
+    .top-bar div {
+        margin: 0 5px;
+    }
+
+    .owner {
+        margin-bottom: 50%;
+    }
+
+    .owner ul li {
+        margin: 0 15px;
+    }
+}
